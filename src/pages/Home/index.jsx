@@ -7,25 +7,13 @@ import storesJson from '../../json/stores.json'
 
 
 export const Home = () => {
-    const [stores, setStores] = useState(storesJson)
+    const stores = storesJson
     const [filteredStores, setFilteredStores] = useState(stores)
     const filters = ['', 'irmao', 'parceiro']
     const [currentFilter, setCurrentFilter] = useState(0)
     const [currentSegmentFilter, setCurrentSegmentFilter] = useState('')
     const [filterSegments, setFilterSegments] = useState([])
 
-    const filter = () => {
-        let filtered = stores
-        console.log(currentSegmentFilter)
-        console.log(currentFilter)
-        if (currentSegmentFilter !== '') {
-            filtered = filtered.filter((store) => store.segment === currentSegmentFilter)
-        }
-        if (currentFilter !== 0) {
-            filtered = filtered.filter((store) => store.type === filters[currentFilter])
-        }
-        setFilteredStores(filtered)
-    }
     const handleChangeSelect = (event) => {
         console.log(event.target.value)
         setCurrentSegmentFilter(event.target.value)
@@ -40,8 +28,17 @@ export const Home = () => {
     }
 
     useEffect(() => {
-        filter()
-    }, [currentSegmentFilter, currentFilter])
+        let filtered = stores
+        console.log(currentSegmentFilter)
+        console.log(currentFilter)
+        if (currentSegmentFilter !== '') {
+            filtered = filtered.filter((store) => store.segment === currentSegmentFilter)
+        }
+        if (currentFilter !== 0) {
+            filtered = filtered.filter((store) => store.type === filters[currentFilter])
+        }
+        setFilteredStores(filtered)
+    }, [currentSegmentFilter, currentFilter, stores, filters])
 
     useEffect(() => {
         const uniqueSegments = new Set()
@@ -51,7 +48,7 @@ export const Home = () => {
 
         const uniqueSegmentsArray = [...uniqueSegments]
         setFilterSegments(uniqueSegmentsArray)
-    }, [])
+    }, [stores])
 
     return (
         <div className='home'>
