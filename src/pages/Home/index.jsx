@@ -9,7 +9,6 @@ import storesJson from '../../json/stores.json'
 export const Home = () => {
     const stores = storesJson
     const [filteredStores, setFilteredStores] = useState(stores)
-    const filters = ['', 'irmao', 'parceiro']
     const [currentFilter, setCurrentFilter] = useState(0)
     const [currentSegmentFilter, setCurrentSegmentFilter] = useState('')
     const [filterSegments, setFilterSegments] = useState([])
@@ -28,6 +27,7 @@ export const Home = () => {
     }
 
     useEffect(() => {
+        const filters = ['', 'irmao', 'parceiro']
         let filtered = stores
         console.log(currentSegmentFilter)
         console.log(currentFilter)
@@ -38,7 +38,7 @@ export const Home = () => {
             filtered = filtered.filter((store) => store.type === filters[currentFilter])
         }
         setFilteredStores(filtered)
-    }, [currentSegmentFilter, currentFilter, stores, filters])
+    }, [currentSegmentFilter, currentFilter, stores])
 
     useEffect(() => {
         const uniqueSegments = new Set()
