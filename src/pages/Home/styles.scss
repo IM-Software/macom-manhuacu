@@ -1,0 +1,166 @@
+.home {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #020202 0%, #0C1336 30.21%);
+
+    .ads {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 150px;
+
+        .ad {
+            font-family: var(--font-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+            width: 100px;
+            height: 100px;
+            background-color: white;
+        }
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .header {
+        display: flex;
+
+        h2 {
+            color: white;
+            max-width: 297px;
+            font-family: var(--font-secondary);
+            padding: 50px;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .images {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: left;
+
+            .logo {
+                width: 455.625px;
+                height: 401.136px;
+            }
+
+            .coin {
+                margin-top: -300px;
+                width: 97.151px;
+                height: 115.864px;
+            }
+        }
+    }
+
+    .list {
+        width: 100%;
+        margin-top: -50px;
+        padding-bottom: 50px;
+
+        .controls {
+            width: 100%;
+            height: 100%;
+
+            p {
+                padding-left: 50px;
+                color: #FFF;
+                font-family: var(--font-primary);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+                padding-left: 50px;
+                margin-top: 16px;
+
+                .custom-select {
+                    position: relative;
+                    width: 177px;
+                    height: 35px;
+                    border-radius: 10px;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    overflow: hidden;
+                }
+
+                select {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    border: none;
+                    width: 100%;
+                    height: 100%;
+                    padding: 7px 14px;
+                    background: #384794;
+                    color: #FFF;
+                    font-family: var(--font-three);
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    cursor: pointer;
+                }
+
+                .custom-select::after {
+                    content: '\142F';
+                    font-weight: bolder;
+                    color: white;
+                    font-size: 15px;
+                    position: absolute;
+                    top: 50%;
+                    right: 20px;
+                    transform: translateY(-50%);
+                    pointer-events: none;
+                }
+
+                .custom-select select:focus {
+                    outline: none;
+                }
+
+                .filters {
+                    button {
+                        border: none;
+                        width: 153px;
+                        height: 35px;
+                        color: #FFF;
+                        cursor: pointer;
+                        border-radius: 10px;
+                        font-family: var(--font-three);
+                        background: #384794;
+                        font-size: 20px;
+                        font-style: normal;
+                        margin-right: 20px;
+                        font-weight: 400;
+                        line-height: normal;
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    }
+
+                    .active {
+                        background: #0FA064;
+                    }
+                }
+            }
+        }
+
+        .adverts {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 30px;
+            margin-top: 43px;
+            margin-left: 20px;
+        }
+    }
+}

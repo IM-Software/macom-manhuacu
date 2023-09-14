@@ -1,0 +1,92 @@
+[
+    {
+        "type": "irmao",
+        "name": "Loja XYZ",
+        "segment": "Carro",
+        "service": "Esse campo é onde falo mais sobre os detalhes do meu serviço e sobre o que eu faço, é, basicamente uma descrição",
+        "responsible": "Lorem",
+        "belongs": "Lorem",
+        "discountDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "contact":{
+            "number": "33 99999-9999",
+            "address": "Endereço X na rua Y no bairro Z, na cidade XYZ, numero tal.",
+            "socialNetwork": "https://xyzw.xyz.x"
+        },
+        "img": "https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-0.png"
+    },
+    {
+        "type": "irmao",
+        "name": "Loja XYZ",
+        "segment": "Supermercado",
+        "service": "Esse campo é onde falo mais sobre os detalhes do meu serviço e sobre o que eu faço, é, basicamente uma descrição",
+        "responsible": "Lorem",
+        "belongs": "Lorem",
+        "discountDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "contact":{
+            "number": "33 99999-9999",
+            "address": "Endereço X na rua Y no bairro Z, na cidade XYZ, numero tal.",
+            "socialNetwork": "https://xyzw.xyz.x"
+        },
+        "img": "https://i.pinimg.com/originals/6e/2c/f9/6e2cf920c73d260231a7cb8a16933486.png"
+    },
+    {
+        "type": "parceiro",
+        "name": "Loja XYZ",
+        "segment": "Supermercado",
+        "service": "Esse campo é onde falo mais sobre os detalhes do meu serviço e sobre o que eu faço, é, basicamente uma descrição",
+        "responsible": "Lorem",
+        "belongs": "Lorem",
+        "discountDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "contact":{
+            "number": "33 99999-9999",
+            "address": "Endereço X na rua Y no bairro Z, na cidade XYZ, numero tal.",
+            "socialNetwork": "https://xyzw.xyz.x"
+        },
+        "img": "https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-0.png"
+    },
+    {
+        "type": "irmao",
+        "name": "Loja XYZ",
+        "segment": "Teste",
+        "service": "Esse campo é onde falo mais sobre os detalhes do meu serviço e sobre o que eu faço, é, basicamente uma descrição",
+        "responsible": "Lorem",
+        "belongs": "Lorem",
+        "discountDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "contact":{
+            "number": "33 99999-9999",
+            "address": "Endereço X na rua Y no bairro Z, na cidade XYZ, numero tal.",
+            "socialNetwork": "https://xyzw.xyz.x"
+        },
+        "img": "https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-0.png"
+    },
+    {
+        "type": "parceiro",
+        "name": "Loja XYZ",
+        "segment": "Teste",
+        "service": "Esse campo é onde falo mais sobre os detalhes do meu serviço e sobre o que eu faço, é, basicamente uma descrição",
+        "responsible": "Lorem",
+        "belongs": "Lorem",
+        "discountDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "contact":{
+            "number": "33 99999-9999",
+            "address": "Endereço X na rua Y no bairro Z, na cidade XYZ, numero tal.",
+            "socialNetwork": "https://xyzw.xyz.x"
+        },
+        "img": "https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-0.png"
+    },
+    {
+        "type": "parceiro",
+        "name": "Loja XYZ",
+        "segment": "Teste",
+        "service": "Esse campo é onde falo mais sobre os detalhes do meu serviço e sobre o que eu faço, é, basicamente uma descrição",
+        "responsible": "Lorem",
+        "belongs": "Lorem",
+        "discountDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "contact":{
+            "number": "33 99999-9999",
+            "address": "Endereço X na rua Y no bairro Z, na cidade XYZ, numero tal.",
+            "socialNetwork": "https://xyzw.xyz.x"
+        },
+        "img": "https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-0.png"
+    }
+]
