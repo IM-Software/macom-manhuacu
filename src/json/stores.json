@@ -6,16 +6,16 @@
         "service": "Esse campo é onde falo mais sobre os detalhes do meu serviço e sobre o que eu faço, é, basicamente uma descrição",
         "responsible": "Lorem",
         "belongs": "Lorem",
-        "discountDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "discountDescription": "Lorem Ipsum is Lorem Ipsum isLorem Ipsum isLorem Ipsum isLorem Ipsum isLorem Ipsum isLorem Ipsum isLorem Ipsum isLorem Ipsum isLorem s",
         "contact":{
             "number": "33 99999-9999",
             "address": "Endereço X na rua Y no bairro Z, na cidade XYZ, numero tal.",
             "socialNetwork": "https://xyzw.xyz.x"
         },
-        "img": "https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-0.png"
+        "img": "https://logodownload.org/wp-content/uploads/2017/04/instagram-logo-17.png"
     },
     {
-        "type": "irmao",
+        "type": "parceiro",
         "name": "Loja XYZ",
         "segment": "Supermercado",
         "service": "Esse campo é onde falo mais sobre os detalhes do meu serviço e sobre o que eu faço, é, basicamente uma descrição",
@@ -34,15 +34,13 @@
         "name": "Loja XYZ",
         "segment": "Supermercado",
         "service": "Esse campo é onde falo mais sobre os detalhes do meu serviço e sobre o que eu faço, é, basicamente uma descrição",
-        "responsible": "Lorem",
-        "belongs": "Lorem",
         "discountDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         "contact":{
             "number": "33 99999-9999",
             "address": "Endereço X na rua Y no bairro Z, na cidade XYZ, numero tal.",
             "socialNetwork": "https://xyzw.xyz.x"
         },
-        "img": "https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-0.png"
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/833px-Apple_logo_black.svg.png"
     },
     {
         "type": "irmao",
@@ -57,36 +55,6 @@
             "address": "Endereço X na rua Y no bairro Z, na cidade XYZ, numero tal.",
             "socialNetwork": "https://xyzw.xyz.x"
         },
-        "img": "https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-0.png"
-    },
-    {
-        "type": "parceiro",
-        "name": "Loja XYZ",
-        "segment": "Teste",
-        "service": "Esse campo é onde falo mais sobre os detalhes do meu serviço e sobre o que eu faço, é, basicamente uma descrição",
-        "responsible": "Lorem",
-        "belongs": "Lorem",
-        "discountDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-        "contact":{
-            "number": "33 99999-9999",
-            "address": "Endereço X na rua Y no bairro Z, na cidade XYZ, numero tal.",
-            "socialNetwork": "https://xyzw.xyz.x"
-        },
-        "img": "https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-0.png"
-    },
-    {
-        "type": "parceiro",
-        "name": "Loja XYZ",
-        "segment": "Teste",
-        "service": "Esse campo é onde falo mais sobre os detalhes do meu serviço e sobre o que eu faço, é, basicamente uma descrição",
-        "responsible": "Lorem",
-        "belongs": "Lorem",
-        "discountDescription": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-        "contact":{
-            "number": "33 99999-9999",
-            "address": "Endereço X na rua Y no bairro Z, na cidade XYZ, numero tal.",
-            "socialNetwork": "https://xyzw.xyz.x"
-        },
-        "img": "https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-0.png"
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/833px-Apple_logo_black.svg.png"
     }
 ]

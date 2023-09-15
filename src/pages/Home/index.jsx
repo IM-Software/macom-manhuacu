@@ -3,6 +3,7 @@ import logo from '../../assets/logo.png'
 import coin from '../../assets/coin.png'
 import logoPhone from '../../assets/headerimg-phone.png'
 import { List } from '../../components/List'
+import { AdComponent } from '../../components/AdComponent'
 
 export const Home = () => {
     return (
@@ -19,9 +20,7 @@ export const Home = () => {
                 <List/>
             </div>
             <div className='ads'>
-                <div className='ad'>Anuncio</div>
-                <div className='ad'>Anuncio</div>
-                <div className='ad'>Anuncio</div>
+                <AdComponent dataAdSlot='4147874316' className='ad'/>
             </div>
         </div>
     )

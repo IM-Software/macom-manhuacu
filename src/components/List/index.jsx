@@ -14,6 +14,7 @@ export const List = () => {
 
     const handleChangeSelect = (option) => {
         setCurrentSegmentFilter(option)
+        setShowOptions(!showOptions)
     }
 
     const handleButton = (index) => {
@@ -54,7 +55,7 @@ export const List = () => {
                     <div className="dropdown-container">
                         <div className="dropdown" onClick={() => setShowOptions(!showOptions)}>
                             <p>{currentSegmentFilter || 'Todos'}</p>
-                            <i class="fa-solid fa-angle-down"></i>
+                            <i className="fa-solid fa-angle-down"></i>
                         </div>
                         {showOptions && (
                             <ul className="options">

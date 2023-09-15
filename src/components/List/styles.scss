@@ -83,8 +83,8 @@
                 padding-right: 30px;
                 button {
                     border: none;
-                    width: 153px;
-                    height: 35px;
+                    width: 177px;
+                    padding: 8px;
                     color: #FFF;
                     cursor: pointer;
                     border-radius: 10px;
@@ -107,13 +107,13 @@
 
     .adverts {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         flex-wrap: wrap;
         width: 100%;
         min-height: 700px;
         gap: 30px;
         margin-top: 43px;
-        padding-left: 10px;
+        padding-left: 50px;
     }
 }
 
@@ -144,7 +144,7 @@
             }
         }
         .adverts {
-            padding-left: 0px;
+            padding-left: 18px;
             margin-top: 19px;
         }
     }
