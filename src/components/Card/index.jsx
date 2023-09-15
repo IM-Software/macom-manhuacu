@@ -1,6 +1,14 @@
+import { useEffect } from 'react'
 import './styles.scss'
 
 export const Card = ({infos}) => {
+
+    useEffect(() =>{
+        infos.service = infos.service.substring(0, 190)
+        infos.linkWpp = infos.contact.number.replace(/[()]/g, '').replace(/\s/g, '').replace(/-/g, '')
+        infos.linkWpp = `+55${infos.linkWpp}`
+    }, [infos])
+
     return (
         <div className='card'>
             <div className='header'>
@@ -33,8 +41,10 @@ export const Card = ({infos}) => {
                 </div>
             </div>
             <div className="buttons">
-                <div className='wpp'><i class="fa-brands fa-whatsapp"></i></div>
-                <div className='map'><i class="fa-solid fa-map"></i></div>
+                <a href={`https://wa.me/${infos.linkWpp}`} rel="noopener" target='blank'>
+                    <div className='wpp'><i class="fa-brands fa-whatsapp"></i></div>
+                </a>
+                <div className='map'><i class="fa-solid fa-map-pin"></i></div>
             </div>
         </div>
     )

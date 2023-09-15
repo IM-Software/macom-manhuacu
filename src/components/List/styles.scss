@@ -1,0 +1,167 @@
+.list {
+    width: 100%;
+    margin-top: -50px;
+    padding-bottom: 50px;
+
+    .controls {
+        width: 100%;
+        height: 100%;
+        padding-left: 50px;
+
+        .title {
+            color: #FFF;
+            font-family: var(--font-primary);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 16px;
+
+            .dropdown-container {
+                height: 100%;
+                position: relative;
+                margin-bottom: 0;
+                display: inline-block;
+                color: #FFF;
+                font-family: var(--font-three);
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            .dropdown {
+                display: flex;
+                align-items: center;
+                width: 177px;
+                height: 20px;
+                border-radius: 10px;
+                background: #384794;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                color: #fff;
+                justify-content: space-between;
+                padding: 10px;
+                cursor: pointer;
+
+                i {
+                    font-size: 18px;
+                }
+            }
+
+            .options {
+                position: absolute;
+                width: 190px;
+                background-color: #384794;
+                border-radius: 10px;
+                top: 100%;
+                left: 0;
+                z-index: 1;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    border-radius: 10px;
+                    padding: 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #1d3bce;
+                    }
+                }
+            }
+
+            .filters {
+                margin-left: 5px;
+                padding-right: 30px;
+                button {
+                    border: none;
+                    width: 153px;
+                    height: 35px;
+                    color: #FFF;
+                    cursor: pointer;
+                    border-radius: 10px;
+                    font-family: var(--font-three);
+                    background: #384794;
+                    font-size: 20px;
+                    font-style: normal;
+                    margin-right: 20px;
+                    font-weight: 400;
+                    line-height: normal;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                }
+
+                .active {
+                    background: #0FA064;
+                }
+            }
+        }
+    }
+
+    .adverts {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        min-height: 700px;
+        gap: 30px;
+        margin-top: 43px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 780px) {
+    .list {
+        margin-top: 14px;
+        .controls {
+            padding-left: 18px;
+            .title {
+                color: black;
+            }
+            .buttons {
+                .filters {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    justify-content: right;
+                    align-items: right;
+                    padding-right: 10px;
+
+                    button {
+                        background: #1B1D24;
+                    }
+                    .buttonOne{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .adverts {
+            padding-left: 0px;
+            margin-top: 19px;
+        }
+    }
+}
+
+@media(max-width: 370px){
+    .list{
+        .controls{
+            .buttons{
+                align-items: baseline;
+                flex-direction: column;
+                .filters{
+                    margin-top: 10px;
+                    margin-left: 0;
+                    justify-content: left;
+                    align-items: left;
+                }
+            }
+        }
+    }
+}
