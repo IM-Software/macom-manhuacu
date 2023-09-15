@@ -19,6 +19,8 @@
 
         .buttons {
             display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
             align-items: center;
             justify-content: space-between;
             margin-top: 16px;
@@ -78,7 +80,6 @@
             }
 
             .filters {
-                margin-left: 5px;
                 padding-right: 30px;
                 button {
                     border: none;
@@ -145,23 +146,6 @@
         .adverts {
             padding-left: 0px;
             margin-top: 19px;
-        }
-    }
-}
-
-@media(max-width: 370px){
-    .list{
-        .controls{
-            .buttons{
-                align-items: baseline;
-                flex-direction: column;
-                .filters{
-                    margin-top: 10px;
-                    margin-left: 0;
-                    justify-content: left;
-                    align-items: left;
-                }
-            }
         }
     }
 }
