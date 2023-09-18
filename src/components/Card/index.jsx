@@ -46,7 +46,9 @@ export const Card = ({ infos }) => {
                 <a href={`https://wa.me/${infos.linkWpp}`} rel="noopener" target='blank'>
                     <div className='wpp'><i className="fa-brands fa-whatsapp"></i></div>
                 </a>
-                <div className='map'><i className="fa-solid fa-map-pin"></i></div>
+                <a href={infos.googleMapsLink} rel="noopener" target='blank'>
+                    <div className='map'><i className="fa-solid fa-map-pin"></i></div>
+                </a>
             </div>
         </div>
     )

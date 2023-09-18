@@ -83,14 +83,13 @@
                 padding-right: 30px;
                 button {
                     border: none;
-                    width: 177px;
-                    padding: 8px;
+                    padding: 10px 20px;
                     color: #FFF;
                     cursor: pointer;
                     border-radius: 10px;
                     font-family: var(--font-three);
                     background: #384794;
-                    font-size: 20px;
+                    font-size: 16px;
                     font-style: normal;
                     margin-right: 20px;
                     font-weight: 400;
@@ -110,7 +109,6 @@
         justify-content: left;
         flex-wrap: wrap;
         width: 100%;
-        min-height: 700px;
         gap: 30px;
         margin-top: 43px;
         padding-left: 50px;
