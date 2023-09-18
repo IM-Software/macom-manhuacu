@@ -11,7 +11,7 @@ export const Home = () => {
             <div className='home'>
                 <div className='container'>
                     <div className="header">
-                        <h2>uma Iniciativa Maçonaria de Manhuaçu</h2>
+                        <h2>Uma Iniciativa Maçonaria de Manhuaçu</h2>
                         <div className="images">
                             <img className='logo' src={logo} alt="logo" />
                             <img className='logoPhone' src={logoPhone} alt="Logo" />

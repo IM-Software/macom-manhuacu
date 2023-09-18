@@ -38,7 +38,7 @@ export const Card = ({ infos }) => {
                 <div className="contact">
                     <h3 className='title'>Informação de contato</h3>
                     <p>Telefone/whatsapp : {infos.contact.number}</p>
-                    <p>{infos.contact.address}</p>
+                    <p>Rua {infos.contact.address.street}, Número {infos.contact.address.number}, Bairro {infos.contact.address.burg}, Cidade {infos.contact.address.city}</p>
                     <p>Rede social: <a className='social' href={infos.contact.socialNetwork} rel="noopener" target='blank'> {infos.contact.socialNetwork}</a></p>
                 </div>
             </div>
@@ -46,7 +46,7 @@ export const Card = ({ infos }) => {
                 <a href={`https://wa.me/${infos.linkWpp}`} rel="noopener" target='blank'>
                     <div className='wpp'><i className="fa-brands fa-whatsapp"></i></div>
                 </a>
-                <a href={infos.googleMapsLink} rel="noopener" target='blank'>
+                <a href={`https://www.google.com/maps/search/?api=1&query=${infos.contact.address.city},${infos.contact.address.state},${infos.contact.address.street},${infos.contact.address.number},${infos.contact.address.burg}`} rel="noopener" target='blank'>
                     <div className='map'><i className="fa-solid fa-map-pin"></i></div>
                 </a>
             </div>

@@ -15,18 +15,24 @@ export const Footer = () => {
             <div className='support'>
                 <div className='container'>
                     <h3>Quer sua empresa cadastrada ou tem alguma dúvida ? entre em contato pelo whatsapp abaixo</h3>
-                    <div className='button-normal'>
-                        <i className="fa-brands fa-whatsapp"></i>
-                        <h3>Suporte parcerias</h3>
-                    </div>
-                    <div className='button-phone'>
-                        <i className="fa-brands fa-whatsapp"></i>
-                        <h3>parcerias</h3>
-                    </div>
+                    <a href={`https://wa.me/+553186053210`} rel="noopener" target='blank'>
+                        <button className='button-normal'>
+                            <i className="fa-brands fa-whatsapp"></i>
+                            <h3>Suporte parcerias</h3>
+                        </button>
+                    </a>
+                    <a href={`https://wa.me/+553186053210`} rel="noopener" target='blank'>
+                        <button className='button-phone'>
+                            <i className="fa-brands fa-whatsapp"></i>
+                            <h3>parcerias</h3>
+                        </button>
+                    </a>
                 </div>
                 <div className="rights">
                     <p>made By</p>
-                    <p className='developer'>IM Software</p>
+                    <a href="https://www.imdesenv.com" rel="noopener" target='blank'>
+                        <p className='developer'>IM Software</p>
+                    </a>
                 </div>
             </div>
         </div>
