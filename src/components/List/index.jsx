@@ -7,7 +7,7 @@ import storesJson from '../../json/stores.json'
 export const List = () => {
     const stores = storesJson
     const [filteredStores, setFilteredStores] = useState(stores)
-    const [currentFilter, setCurrentFilter] = useState(0)
+    const [currentFilter, setCurrentFilter] = useState(1)
     const [currentSegmentFilter, setCurrentSegmentFilter] = useState('')
     const [filterSegments, setFilterSegments] = useState([])
     const [showOptions, setShowOptions] = useState(false)
@@ -52,7 +52,7 @@ export const List = () => {
             <div className="controls">
                 <p className='title'>Selecione a categoria desejada</p>
                 <div className="buttons">
-                    <div className="dropdown-container">
+                    <div className="dropdown-container" onMouseLeave={() => setShowOptions(false)}>
                         <div className="dropdown" onClick={() => setShowOptions(!showOptions)}>
                             <p>{currentSegmentFilter || 'Todos'}</p>
                             <i className="fa-solid fa-angle-down"></i>
@@ -71,7 +71,7 @@ export const List = () => {
                         )}
                     </div>
                     <div className="filters">
-                        <button className={`buttonOne ${currentFilter === 1 ? 'active' : ''}`} onClick={() => handleButton(1)}>Irmaos</button>
+                        <button className={`buttonOne ${currentFilter === 1 ? 'active' : ''}`} onClick={() => handleButton(1)}>Irmãos</button>
                         <button className={`buttonTwo ${currentFilter === 2 ? 'active' : ''}`} onClick={() => handleButton(2)}>Parceiros</button>
                     </div>
                 </div>

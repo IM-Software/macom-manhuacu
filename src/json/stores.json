@@ -27,7 +27,8 @@
             "address": "Endereço X na rua Y no bairro Z, na cidade XYZ, numero tal.",
             "socialNetwork": "https://xyzw.xyz.x"
         },
-        "img": "https://i.pinimg.com/originals/6e/2c/f9/6e2cf920c73d260231a7cb8a16933486.png"
+        "img": "https://i.pinimg.com/originals/6e/2c/f9/6e2cf920c73d260231a7cb8a16933486.png",
+        "googleMapsLink": "https://www.google.com.br/maps/place/Máximo+Pão+-+Padaria/@-20.2543053,-42.033793,17z/data=!4m6!3m5!1s0xbafd8424b50617:0x15bb46d72596a36e!8m2!3d-20.250999!4d-42.032286!16s%2Fg%2F1tn070vj?entry=ttu"
     },
     {
         "type": "parceiro",
@@ -40,7 +41,8 @@
             "address": "Endereço X na rua Y no bairro Z, na cidade XYZ, numero tal.",
             "socialNetwork": "https://xyzw.xyz.x"
         },
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/833px-Apple_logo_black.svg.png"
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/833px-Apple_logo_black.svg.png",
+        "googleMapsLink": "https://www.google.com.br/maps/place/Máximo+Pão+-+Padaria/@-20.2543053,-42.033793,17z/data=!4m6!3m5!1s0xbafd8424b50617:0x15bb46d72596a36e!8m2!3d-20.250999!4d-42.032286!16s%2Fg%2F1tn070vj?entry=ttu"
     },
     {
         "type": "irmao",
@@ -55,6 +57,7 @@
             "address": "Endereço X na rua Y no bairro Z, na cidade XYZ, numero tal.",
             "socialNetwork": "https://xyzw.xyz.x"
         },
-        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/833px-Apple_logo_black.svg.png"
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/833px-Apple_logo_black.svg.png",
+        "googleMapsLink": "https://www.google.com.br/maps/place/Máximo+Pão+-+Padaria/@-20.2543053,-42.033793,17z/data=!4m6!3m5!1s0xbafd8424b50617:0x15bb46d72596a36e!8m2!3d-20.250999!4d-42.032286!16s%2Fg%2F1tn070vj?entry=ttu"
     }
 ]
