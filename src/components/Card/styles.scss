@@ -1,10 +1,11 @@
 .card {
     width: 340px;
-    height: 313px;
     border-radius: 20px;
     padding: 20px;
     background: #D9D9D9;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
 
     .header {
         display: flex;
@@ -13,29 +14,30 @@
         .name {
             color: #000;
             font-family: var(--font-primary);
-            font-size: 12px;
+            font-size: 16px;
             font-style: normal;
             font-weight: 900;
             line-height: normal;
         }
-
         .segment {
             display: flex;
-            justify-content: center;
             align-items: center;
-            margin-right: 5px;
+            margin-left: 5px;
+            height: 10px;
+            max-width: 100px;
+            justify-content: center;
+            text-align: center;
             background: #384794;
             border-radius: 10px;
-            text-align: center;
+            padding: 15px;
             
             p {
-                padding: 6px;
                 color: #FFF;
                 font-family: var(--font-three);
-                font-size: 10px;
+                font-size: 12px;
                 font-style: normal;
-                font-weight: 400;
-                line-height: normal;
+                font-weight: bold;
+                line-height: 15px;
             }
         }
     }
@@ -44,77 +46,108 @@
         width: 100%;
         height: 100%;
         display: flex;
+        position: relative;
         margin-top: 10px;
-
         flex-direction: column;
+        gap: 10px;
         color: #000;
         font-family: var(--font-primary);
-        font-size: 10px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
 
+        .responsible {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+        }
+
         .discount{
             display: flex;
-            justify-content: space-between;
+            gap: 10px;
             margin-bottom: 0px;
-            .text{
-                width: 250px;
+            width: 60%;
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
             }
         }
 
         .service{
-            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            p {
+                overflow: hidden;
+                word-wrap: break-word;
+                text-overflow: ellipsis;
+            }
         }
 
         .logo {
-            width: 90%;
-            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 5%;
+            border-radius: 8px;
             display: flex;
-            justify-content: right;
-            align-items: right;
 
             img {
-                max-width: 150.017px;
-                max-height: 50.659px;
+                border-radius: 8px;
+                max-width:  120px;
+                max-height: 100px;
             }
         }
 
         a {
             color: #000;
             font-family: var(--font-primary);
-            font-size: 10px;
+            font-size: 12px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
         }
 
         .title {
-            font-weight: 700;
-            margin-top: 5px;
-        }
-
-        div {
-            p {
-                margin-top: 5px;
-            }
-
-            margin-bottom: 5px;
+        font-weight: bold;
+           font-size: 14px;
         }
 
         .contact {
-            max-width: 200px;
-            .social {
-                margin-top: 10px;
-            }
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
     }
 
     .buttons {
         display: flex;
-        margin-top: -100px;
-        align-items: right;
-        justify-content: right;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+
+        &__text {
+            color: #000;
+            font-family: var(--font-primary);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+
+            p {
+                margin-top: 5px;
+            }
+        }
+
+        &__btn {
+            display: flex;
+            flex-direction: row;
+            margin-left: 20px;
+        }
 
         .wpp {
             margin-right: 11px;
@@ -130,17 +163,22 @@
 
         .map,
         .wpp {
+            padding: 2px;
             display: flex;
             cursor: pointer;
             justify-content: center;
             align-items: center;
-            width: 42.963px;
+            width: 40px;
             height: 41.457px;
             background-color: #FFF;
             border-radius: 100%;
+
+            transition: filter 0.2s;
+
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
             &:hover{
+                transition: filter 0.2s;
                 filter: brightness(75%);
             }
         }
@@ -168,8 +206,5 @@
         width: 80%;
         height: 100%;
         min-height: 313px;
-        .buttons{
-            margin-top: -30px;
-        }
     }
 }

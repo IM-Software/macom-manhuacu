@@ -1,16 +1,19 @@
 import './styles.scss'
 import { Card } from '../../components/Card'
 import { useEffect, useState } from 'react'
-import storesJson from '../../json/stores.json'
+import axios from 'axios'
 
 
 export const List = () => {
-    const stores = storesJson
+    const [stores, setStores] = useState([])
     const [filteredStores, setFilteredStores] = useState(stores)
     const [currentFilter, setCurrentFilter] = useState(1)
     const [currentSegmentFilter, setCurrentSegmentFilter] = useState('')
     const [filterSegments, setFilterSegments] = useState([])
     const [showOptions, setShowOptions] = useState(false)
+    const [showButtonTwo, setShowButtonTwo] = useState(false)
+
+    const url = 'https://irmaocompradeirmao.s3.sa-east-1.amazonaws.com/stores.json'
 
     const handleChangeSelect = (option) => {
         setCurrentSegmentFilter(option)
@@ -24,6 +27,15 @@ export const List = () => {
             setCurrentFilter(index)
         }
     }
+
+    const getStores = async () => {
+        const response = await axios.get(url)
+        setStores(response.data)
+    }
+
+    useEffect(() => {
+        getStores()
+    }, [])
 
     useEffect(() => {
         const filters = ['', 'irmao', 'parceiro']
@@ -41,13 +53,19 @@ export const List = () => {
         const uniqueSegments = new Set()
         stores.forEach((store) => {
             const segmentSplit = store.segment.split(" e ")
-            segmentSplit.forEach((segment) =>{
+            segmentSplit.forEach((segment) => {
                 uniqueSegments.add(segment)
             })
         })
 
         const uniqueSegmentsArray = [...uniqueSegments]
         setFilterSegments(uniqueSegmentsArray)
+
+        const quantityPartners = stores.filter((stores) => stores.type === 'parceiro')
+        if (quantityPartners.length > 0) {
+            setShowButtonTwo(true)
+        }
+
     }, [stores])
 
     return (
@@ -75,7 +93,9 @@ export const List = () => {
                     </div>
                     <div className="filters">
                         <button className={`buttonOne ${currentFilter === 1 ? 'active' : ''}`} onClick={() => handleButton(1)}>Irmãos</button>
-                        <button className={`buttonTwo ${currentFilter === 2 ? 'active' : ''}`} onClick={() => handleButton(2)}>Parceiros</button>
+                        {showButtonTwo &&
+                            <button className={`buttonTwo ${currentFilter === 2 ? 'active' : ''}`} onClick={() => handleButton(2)}>Parceiros</button>
+                        }
                     </div>
                 </div>
             </div>
