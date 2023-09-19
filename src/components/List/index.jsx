@@ -29,7 +29,7 @@ export const List = () => {
         const filters = ['', 'irmao', 'parceiro']
         let filtered = stores
         if (currentSegmentFilter !== '') {
-            filtered = filtered.filter((store) => store.segment === currentSegmentFilter)
+            filtered = filtered.filter((store) => store.segment.includes(currentSegmentFilter))
         }
         if (currentFilter !== 0) {
             filtered = filtered.filter((store) => store.type.toLowerCase() === filters[currentFilter].toLowerCase())
@@ -40,7 +40,10 @@ export const List = () => {
     useEffect(() => {
         const uniqueSegments = new Set()
         stores.forEach((store) => {
-            uniqueSegments.add(store.segment)
+            const segmentSplit = store.segment.split(" e ")
+            segmentSplit.forEach((segment) =>{
+                uniqueSegments.add(segment)
+            })
         })
 
         const uniqueSegmentsArray = [...uniqueSegments]
