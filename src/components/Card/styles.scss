@@ -23,14 +23,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 20.728px;
             margin-right: 5px;
             background: #384794;
             border-radius: 10px;
-
+            text-align: center;
+            
             p {
+                padding: 6px;
                 color: #FFF;
-                padding: 10px;
                 font-family: var(--font-three);
                 font-size: 10px;
                 font-style: normal;
