@@ -54,16 +54,24 @@ export const Card = ({ infos }) => {
                     <h3 className='title'>Informação de contato</h3>
                     <p>Telefone/whatsapp : {infos.contact.number}</p>
                     <p>{infos.contact.address}</p>
-                    <p>Rede social: <a className='social' href={infos.socialLink} rel="noopener" target='blank'> {infos.contact.socialNetwork}</a></p>
+                  
                 </div>
             </div>
             <div className="buttons">
-                <a href={`https://api.whatsapp.com/send/?phone=${infos.linkWpp}`} rel="noopener" target='blank'>
-                    <div className='wpp'><i className="fa-brands fa-whatsapp"></i></div>
-                </a>
-                <a href={`https://www.google.com/maps/search/?api=1&query=${infos.contact.address}`} rel="noopener" target='blank'>
-                    <div className='map'><i className="fa-solid fa-map-pin"></i></div>
-                </a>
+                <div className='buttons__text'>
+                    <label>Rede Social</label>
+                    <p><a className='social' href={infos.socialLink} rel="noopener" target='blank'> {infos.contact.socialNetwork}</a></p>
+                </div>
+
+                <div className='buttons__btn'>
+                    <a href={`https://api.whatsapp.com/send/?phone=${infos.linkWpp}`} rel="noopener" target='blank'>
+                        <div className='wpp'><i className="fa-brands fa-whatsapp"></i></div>
+                    </a>
+                    <a href={`https://www.google.com/maps/search/?api=1&query=${infos.contact.address}`} rel="noopener" target='blank'>
+                        <div className='map'><i className="fa-solid fa-map-pin"></i></div>
+                    </a>
+                </div>
+              
             </div>
         </div>
     )

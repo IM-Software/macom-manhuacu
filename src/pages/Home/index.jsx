@@ -20,13 +20,7 @@ export const Home = () => {
                     </div>
                     <List />
                 </div>
-                <div className='ads'>
-                    <ins className="adsbygoogle"
-                        style={{ display: "block", height: 600, width: 300 }}
-                        data-ad-format="auto"
-                        data-full-width-responsive="true">
-                    </ins>
-                </div>
+                <div className='ads' />
             </div>
             <Footer />
         </>
