@@ -209,3 +209,13 @@
         min-height: 313px;
     }
 }
+
+@media(max-width: 380px) {
+    .card {
+        .content {
+            .responsible{
+                max-width: 150px;
+            }
+        }
+    }
+}

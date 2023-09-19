@@ -2,7 +2,7 @@ import './styles.scss'
 
 export const Card = ({ infos = null }) => {
 
-    if(infos.service.length > 125){
+    if (infos.service.length > 125) {
         infos.service = infos.service.substring(0, 125) + '...'
     }
 
@@ -56,16 +56,23 @@ export const Card = ({ infos = null }) => {
                     <p>Telefone/whatsapp : {infos.contact.number}</p>
                     <h3 className='title'>Endereço da empresa</h3>
                     <p>{infos.contact.address}</p>
-                    <p>Rede social: <a className='social' href={infos.socialLink} rel="noopener" target='blank'> {infos.contact.socialNetwork}</a></p>
                 </div>
             </div>
             <div className="buttons">
-                <a href={`https://api.whatsapp.com/send/?phone=${infos.linkWpp}`} rel="noopener" target='blank'>
-                    <div className='wpp'><i className="fa-brands fa-whatsapp"></i></div>
-                </a>
-                <a href={`https://www.google.com/maps/search/?api=1&query=${infos.contact.address}`} rel="noopener" target='blank'>
-                    <div className='map'><i className="fa-solid fa-map-pin"></i></div>
-                </a>
+                {infos.socialLink ? (
+                    <div className='buttons__text'>
+                        <label>Rede Social</label>
+                        <p><a className='social' href={infos.socialLink} rel="noopener" target='blank'> {infos.contact.socialNetwork}</a></p>
+                    </div>
+                ) : <div />}
+                <div className='buttons__btn'>
+                    <a href={`https://api.whatsapp.com/send/?phone=${infos.linkWpp}`} rel="noopener" target='blank'>
+                        <div className='wpp'><i className="fa-brands fa-whatsapp"></i></div>
+                    </a>
+                    <a href={`https://www.google.com/maps/search/?api=1&query=${infos.contact.address}`} rel="noopener" target='blank'>
+                        <div className='map'><i className="fa-solid fa-map-pin"></i></div>
+                    </a>
+                </div>
             </div>
         </div>
     )

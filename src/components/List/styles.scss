@@ -21,7 +21,6 @@
             align-items: center;
             justify-content: space-between;
             margin-top: 15px;
-
             .dropdown-container {
                 height: 100%;
                 position: relative;
@@ -154,8 +153,10 @@
             }
         }
         .adverts {
+            width: 95%;
             align-items: left;
-            margin-left: 18px;
+            margin-left: 0px;
+            padding-left: 18px;
             margin-top: 19px;
         }
     }
