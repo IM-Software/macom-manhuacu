@@ -42,8 +42,10 @@ export const Card = ({ infos }) => {
                 </div>
                 {infos.type === 'irmao' &&
                     <div className="responsible">
-                        <h3 className='title'>Nome do maçon responsável : {infos.responsible}</h3>
-                        <h3 className='title'>Pertence a loja {infos.storeBelongs}</h3>
+                        <h3 className='title'>Nome do maçom responsável</h3>
+                        <span>{infos.responsible}</span>
+                        <h3 className='title'>Pertence a loja</h3>
+                        <span>{infos.storeBelongs}</span>
                     </div>
                 }
                 <div className="service">
@@ -53,15 +55,19 @@ export const Card = ({ infos }) => {
                 <div className="contact">
                     <h3 className='title'>Informação de contato</h3>
                     <p>Telefone/whatsapp : {infos.contact.number}</p>
+                    <h3 className='title'>Endereço da empresa</h3>
                     <p>{infos.contact.address}</p>
                   
                 </div>
             </div>
             <div className="buttons">
-                <div className='buttons__text'>
+                { infos.socialLink ? (
+                    <div className='buttons__text'>
                     <label>Rede Social</label>
                     <p><a className='social' href={infos.socialLink} rel="noopener" target='blank'> {infos.contact.socialNetwork}</a></p>
                 </div>
+                ): <div /> }
+                
 
                 <div className='buttons__btn'>
                     <a href={`https://api.whatsapp.com/send/?phone=${infos.linkWpp}`} rel="noopener" target='blank'>

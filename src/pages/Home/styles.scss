@@ -26,8 +26,8 @@
             padding: 50px;
             font-size: 20px;
             font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+            font-weight: bold;
+            line-height: 30px;
         }
 
         .images {
@@ -35,20 +35,21 @@
             flex-direction: column;
             align-items: left;
             justify-content: left;
+            padding: 50px 0 0 0;
+            position: relative;
+            width: 350px;
+            height: 100px;
 
-            .logo {
-                width: 455.625px;
-                height: 401.136px;
-            }
-
+     
             .logoPhone {
                 display: none;
             }
 
             .coin {
-                margin-top: -300px;
-                width: 97.151px;
-                height: 115.864px;
+                position: absolute;
+                width: 80px;
+                top: 100%;
+                height: 80px;
             }
         }
     }
