@@ -28,12 +28,27 @@ export const List = () => {
         }
     }
 
-    const getStores = async () => {
-        const response = await axios.get(url)
-        setStores(response.data)
+    const alphabeticalOrder = (obj) =>{
+        function removeAccents(str) {
+            return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        }
+        const objOrganized = obj.sort((a, b) => {
+            const nameA = removeAccents(a.name.toLowerCase())
+            const nameB = removeAccents(b.name.toLowerCase())
+
+            if (nameA > nameB) return 1
+            if (nameB > nameA) return -1
+            return 0
+        })
+
+        return objOrganized
     }
 
     useEffect(() => {
+        const getStores = async () => {
+            const response = await axios.get(url)
+            setStores(alphabeticalOrder(response.data))
+        }
         getStores()
     }, [])
 
@@ -46,7 +61,7 @@ export const List = () => {
         if (currentFilter !== 0) {
             filtered = filtered.filter((store) => store.type.toLowerCase() === filters[currentFilter].toLowerCase())
         }
-        setFilteredStores(filtered)
+        setFilteredStores(alphabeticalOrder(filtered))
     }, [currentSegmentFilter, currentFilter, stores])
 
     useEffect(() => {
@@ -59,7 +74,7 @@ export const List = () => {
         })
 
         const uniqueSegmentsArray = [...uniqueSegments]
-        setFilterSegments(uniqueSegmentsArray)
+        setFilterSegments(uniqueSegmentsArray.sort())
 
         const quantityPartners = stores.filter((stores) => stores.type === 'parceiro')
         if (quantityPartners.length > 0) {
