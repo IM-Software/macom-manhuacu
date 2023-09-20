@@ -44,12 +44,11 @@ export const List = () => {
         return objOrganized
     }
 
-    const getStores = async () => {
-        const response = await axios.get(url)
-        setStores(alphabeticalOrder(response.data))
-    }
-
     useEffect(() => {
+        const getStores = async () => {
+            const response = await axios.get(url)
+            setStores(alphabeticalOrder(response.data))
+        }
         getStores()
     }, [])
 
