@@ -12,6 +12,7 @@ export const Card = ({ infos = null }) => {
 
     if (infos.contact.socialNetwork.startsWith('https://')) {
         infos.socialLink = infos.contact.socialNetwork
+        infos.contact.socialNetwork = infos.contact.socialNetwork.replace(/^https:\/\//, '')
     }
 
     if (infos.contact.socialNetwork.startsWith('@')) {
