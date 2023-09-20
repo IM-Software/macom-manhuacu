@@ -1,4 +1,5 @@
 import './styles.scss'
+import  formatPhone  from '../../helpers/formatPhone'
 
 export const Card = ({ infos = null }) => {
 
@@ -53,7 +54,7 @@ export const Card = ({ infos = null }) => {
                 </div>
                 <div className="contact">
                     <h3 className='title'>Informação de contato</h3>
-                    <p>Telefone/whatsapp : {infos.contact.number}</p>
+                    <p>Telefone/whatsapp : {formatPhone(infos.contact.number)}</p>
                     <h3 className='title'>Endereço da empresa</h3>
                     <p>{infos.contact.address}</p>
                 </div>
