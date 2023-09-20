@@ -38,7 +38,7 @@
             padding: 50px 0 0 0;
             position: relative;
             width: 350px;
-            height: 100px;
+            height: 100%;
 
      
             .logoPhone {
@@ -48,7 +48,7 @@
             .coin {
                 position: absolute;
                 width: 80px;
-                top: 100%;
+                top: 40%;
                 height: 80px;
             }
         }
@@ -70,7 +70,7 @@
 
             .images {
                 width: 100%;
-                padding-top: 40px;
+                padding-top: 41px;
                 background: #002aad;
                 .logo {
                     display: none;

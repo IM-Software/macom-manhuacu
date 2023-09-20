@@ -1,24 +1,23 @@
-import { useEffect } from 'react'
 import './styles.scss'
 
-export const Card = ({ infos }) => {
+export const Card = ({ infos = null }) => {
 
-    useEffect(() => {
-        infos.service = infos.service.substring(0, 190)
-        infos.linkWpp = infos.contact.number.replace(/[()]/g, '').replace(/\s/g, '').replace(/-/g, '')
-        infos.linkWpp = `55${infos.linkWpp}`
+    if (infos.service.length > 125) {
+        infos.service = infos.service.substring(0, 125) + '...'
+    }
+
+    infos.linkWpp = infos.contact.number.replace(/[()]/g, '').replace(/\s/g, '').replace(/-/g, '')
+    infos.linkWpp = `55${infos.linkWpp}`
 
 
-        if (infos.contact.socialNetwork.startsWith('https://')) {
-            infos.socialLink = infos.contact.socialNetwork
-        }
+    if (infos.contact.socialNetwork.startsWith('https://')) {
+        infos.socialLink = infos.contact.socialNetwork
+    }
 
-        if (infos.contact.socialNetwork.startsWith('@')) {
-            const username = infos.contact.socialNetwork.substring(1)
-            infos.socialLink = `https://www.instagram.com/${username}`
-        }
-
-    }, [infos])
+    if (infos.contact.socialNetwork.startsWith('@')) {
+        const username = infos.contact.socialNetwork.substring(1)
+        infos.socialLink = `https://www.instagram.com/${username}`
+    }
 
     return (
         <div className='card'>
@@ -57,18 +56,15 @@ export const Card = ({ infos }) => {
                     <p>Telefone/whatsapp : {infos.contact.number}</p>
                     <h3 className='title'>Endereço da empresa</h3>
                     <p>{infos.contact.address}</p>
-                  
                 </div>
             </div>
             <div className="buttons">
-                { infos.socialLink ? (
+                {infos.socialLink ? (
                     <div className='buttons__text'>
-                    <label>Rede Social</label>
-                    <p><a className='social' href={infos.socialLink} rel="noopener" target='blank'> {infos.contact.socialNetwork}</a></p>
-                </div>
-                ): <div /> }
-                
-
+                        <label>Rede Social</label>
+                        <p><a className='social' href={infos.socialLink} rel="noopener" target='blank'> {infos.contact.socialNetwork}</a></p>
+                    </div>
+                ) : <div />}
                 <div className='buttons__btn'>
                     <a href={`https://api.whatsapp.com/send/?phone=${infos.linkWpp}`} rel="noopener" target='blank'>
                         <div className='wpp'><i className="fa-brands fa-whatsapp"></i></div>
@@ -77,7 +73,6 @@ export const Card = ({ infos }) => {
                         <div className='map'><i className="fa-solid fa-map-pin"></i></div>
                     </a>
                 </div>
-              
             </div>
         </div>
     )
