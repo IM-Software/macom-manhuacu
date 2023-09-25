@@ -23,7 +23,6 @@ export const Card = ({ infos = null }) => {
     infos.wppDiscountMassage = infos.discountDescription.toLowerCase()
     if (infos.wppDiscountMassage.startsWith("desconto")) {
         infos.wppDiscountMassage = infos.wppDiscountMassage.slice("desconto".length).trim()
-        console.log(infos.wppDiscountMassage)
     }
 
     return (
