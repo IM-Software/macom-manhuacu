@@ -67,7 +67,7 @@ export const Card = ({ infos = null }) => {
                     </div>
                 ) : <div />}
                 <div className='buttons__btn'>
-                    <a href={`https://api.whatsapp.com/send/?phone=${infos.linkWpp}`} rel="noopener" target='blank'>
+                    <a href={`https://api.whatsapp.com/send/?phone=${infos.linkWpp}&text=Olá, vim através do app Irmão compra de irmão, verifiquei que você tem parceria e um desconto ${infos.discountDescription.toLowerCase()}, gostaria de conversar mais sobre`} rel="noopener" target='blank'>
                         <div className='wpp'><i className="fa-brands fa-whatsapp"></i></div>
                     </a>
                     <a href={`https://www.google.com/maps/search/?api=1&query=${infos.contact.address}`} rel="noopener" target='blank'>
