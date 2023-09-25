@@ -24,6 +24,9 @@ export const Card = ({ infos = null }) => {
     if (infos.wppDiscountMassage.startsWith("desconto")) {
         infos.wppDiscountMassage = infos.wppDiscountMassage.slice("desconto".length).trim()
     }
+    if (infos.wppDiscountMassage.startsWith("descontos")) {
+        infos.wppDiscountMassage = infos.wppDiscountMassage.slice("descontos".length).trim()
+    }
 
     return (
         <div className='card'>
