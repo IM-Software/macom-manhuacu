@@ -13,7 +13,7 @@ export const List = () => {
     const [showOptions, setShowOptions] = useState(false)
     const [showButtonTwo, setShowButtonTwo] = useState(false)
 
-    const url = 'https://irmaocompradeirmao.s3.sa-east-1.amazonaws.com/stores.json'
+    const url = 'https://irmao-compra-de-irmao.s3.amazonaws.com/stores.json'
 
     const handleChangeSelect = (option) => {
         setCurrentSegmentFilter(option)
